@@ -115,6 +115,41 @@ test('should be able to search for items', async ({ searchPage }) => {
    ```bash
    npm install
    ```
+4. (Optional) Setup linter and formatting locally.  
+* ESLint  
+    * Install VS Code extention -> "ESLint"
+    * In VS Code -> User -> settings.json
+    ```
+    "eslint.options": {
+        "overrideConfigFile": "eslint.config.mjs"
+    },
+    "eslint.enable": true,
+    "eslint.workingDirectories": [
+        "."
+    ],
+    "eslint.codeActionsOnSave.rules": null,
+    "editor.codeActionsOnSave": [
+        "source.fixAll.eslint"
+    ],
+    "eslint.debug": true,
+    "eslint.validate": [
+        "typescript"
+    ],
+    "eslint.format.enable": true,
+    "eslint.lintTask.enable": true,
+    ```
+* Dprint
+    * Install VS Code extention -> "Dprint Code Formatter"
+    * Set Dprint as default formatter in VS Code -> User -> settings.json
+    ```
+    "[typescript]": {
+        "editor.defaultFormatter": "dprint.dprint"
+    },
+    ```
+    * Turn on "Format on Save" option so your code is formatted automatically when saving (in VS Code -> User -> settings.json)
+    ```
+    "editor.formatOnSave": true,
+    ```
 
 ## Running tests
 
