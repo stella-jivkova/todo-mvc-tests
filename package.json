@@ -1,0 +1,27 @@
+{
+  "name": "todo-mvc-tests",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "lint:check": "eslint",
+    "lint:fix": "eslint --fix",
+    "ts:check": "tsc",
+    "format:check": "dprint check",
+    "format": "dprint fmt",
+    "pre:test": "npm run ts:check && npm run format:check && npm run lint:check",
+    "test": "npm run pre:test && playwright test",
+    "test:chromium": "npm run pre:test playwright test --ui --project=chromium",
+    "test:ui": "npm run pre:test playwright test --ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.0",
+    "dprint": "^0.49.1",
+    "eslint-plugin-playwright": "^2.2.0",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1"
+  }
+}
