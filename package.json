@@ -10,8 +10,8 @@
     "format": "dprint fmt",
     "pre:test": "npm run ts:check && npm run format:check && npm run lint:check",
     "test": "npm run pre:test && playwright test",
-    "test:chromium": "npm run pre:test playwright test --ui --project=chromium",
-    "test:ui": "npm run pre:test playwright test --ui"
+    "test:chromium": "npm run pre:test && playwright test --ui --project=chromium",
+    "test:ui": "npm run pre:test && playwright test --ui"
   },
   "keywords": [],
   "author": "",
